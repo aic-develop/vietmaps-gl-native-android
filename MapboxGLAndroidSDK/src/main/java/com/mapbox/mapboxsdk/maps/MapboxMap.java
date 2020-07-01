@@ -103,7 +103,9 @@ public final class MapboxMap {
 
   void initialise(@NonNull Context context, @NonNull MapboxMapOptions options) {
     transform.initialise(this, options);
-    uiSettings.initialise(context, options);
+
+    // Disable logo
+    // uiSettings.initialise(context, options);
 
     // Map configuration
     setDebugActive(options.getDebugActive());

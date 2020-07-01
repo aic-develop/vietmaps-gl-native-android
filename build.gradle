@@ -25,6 +25,9 @@ allprojects {
         maven { url 'https://mapbox.bintray.com/mapbox' }
         // Snapshot repository
         // maven { url 'https://oss.jfrog.org/artifactory/oss-snapshot-local/' }
+        maven {
+            url 'https://dl.bintray.com/rosaliza/vietmaps'
+        }
     }
     apply from: "${rootDir}/gradle/ktlint.gradle"
 }
