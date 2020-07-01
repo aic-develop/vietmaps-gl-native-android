@@ -1,6 +1,6 @@
 [submodule "vendor/mapbox-gl-native"]
 	path = vendor/mapbox-gl-native
-	url = https://github.com/mapbox/mapbox-gl-native.git
+	url = https://github.com/aic-develop/vietmaps-gl-native.git
 [submodule "vendor/mapbox-events-android"]
 	path = vendor/mapbox-events-android
 	url = https://github.com/mapbox/mapbox-events-android.git

@@ -9,7 +9,7 @@ group = project.ext.mapboxArtifactGroupId
 
 publishing {
     publications {
-        MapboxMapsSdkPublication(MavenPublication) {
+        VietmapsMapsSDKPublication(MavenPublication) {
             from components.android
             groupId this.group
             artifactId project.ext.mapboxArtifactId
@@ -35,10 +35,10 @@ publishing {
                 developerNode.appendNode('id', project.ext.mapboxDeveloperId)
                 developerNode.appendNode('name', project.ext.mapboxDeveloperName)
 
-                final scmNode = mainNode.appendNode("scm")
-                scmNode.appendNode("connection", project.ext.mapboxArtifactScmUrl)
-                scmNode.appendNode("developerConnection", project.ext.mapboxArtifactScmUrl)
-                scmNode.appendNode("url", project.ext.mapboxArtifactUrl)
+//                final scmNode = mainNode.appendNode("scm")
+//                scmNode.appendNode("connection", project.ext.mapboxArtifactScmUrl)
+//                scmNode.appendNode("developerConnection", project.ext.mapboxArtifactScmUrl)
+//                scmNode.appendNode("url", project.ext.mapboxArtifactUrl)
             }
         }
     }
@@ -47,25 +47,26 @@ publishing {
 bintray {
     user = mapboxBintrayUser
     key = mapboxBintrayApiKey
-    publications('MapboxMapsSdkPublication')
+    publications('VietmapsMapsSDKPublication')
+    override = true
     pkg {
         repo = project.ext.mapboxBintrayRepoName
         name = project.ext.mapboxBintrayPackageName
         userOrg = project.ext.mapboxBintrayUserOrg
         licenses = [project.ext.mapboxArtifactLicenseName]
         vcsUrl = project.ext.mapboxArtifactVcsUrl
-        publish = false
+        publish = true
         version {
             name = project.ext.versionName
             desc = project.ext.mapboxArtifactDescription
             released = new Date()
-            gpg {
-                sign = true
-                passphrase = mapboxGpgPassphrase
-            }
-            mavenCentralSync {
-                sync = false
-            }
+//            gpg {
+//                sign = true
+//                passphrase = mapboxGpgPassphrase
+//            }
+//            mavenCentralSync {
+//                sync = false
+//            }
         }
     }
 }
@@ -113,5 +114,3 @@ afterEvaluate { project ->
         }
     }
 }
-
-

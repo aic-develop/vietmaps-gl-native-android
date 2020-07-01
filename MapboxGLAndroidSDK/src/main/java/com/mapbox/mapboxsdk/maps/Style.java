@@ -1085,7 +1085,7 @@ public class Style {
    * constants means your map style will always use the latest version and may change as we
    * improve the style
    */
-  @StringDef( {MAPBOX_STREETS, OUTDOORS, LIGHT, DARK, SATELLITE, SATELLITE_STREETS, TRAFFIC_DAY, TRAFFIC_NIGHT})
+  @StringDef( {MAPBOX_STREETS, OUTDOORS, LIGHT, DARK, SATELLITE, SATELLITE_STREETS, TRAFFIC_DAY, TRAFFIC_NIGHT, VIETMAPS_DEFAULT, VIETMAPS_BASIC})
   @Retention(RetentionPolicy.SOURCE)
   public @interface StyleUrl {
   }
@@ -1147,4 +1147,15 @@ public class Style {
    * may change as we improve the style.
    */
   public static final String TRAFFIC_NIGHT = "mapbox://styles/mapbox/traffic-night-v2";
+
+  /**
+   * Traffic Night: Color-coded roads based on live traffic congestion data, designed to maximize
+   * legibility in low-light situations. Traffic data is currently available in
+   * <a href="https://www.mapbox.com/help/how-directions-work/#traffic-data">these select
+   * countries</a>. Using this constant means your map style will always use the latest version and
+   * may change as we improve the style.
+   */
+  public static final String VIETMAPS_DEFAULT = "vietmap://styles/default/style.json";
+
+  public static final String VIETMAPS_BASIC = "vietmap://styles/basic/style.json";
 }
