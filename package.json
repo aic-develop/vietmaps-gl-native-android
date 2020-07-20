@@ -15,7 +15,7 @@
   "devDependencies": {
     "ejs": "^2.5.7",
     "esm": "~3.1.0",
-    "lodash": "^4.16.4",
+    "lodash": "^4.17.19",
     "pixelmatch": "^4.0.2"
   },
   "engines": {
